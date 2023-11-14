@@ -76,10 +76,24 @@ console.log(hasDuplicatesArrow(numbers2));
 
 /*BONUS */
 
-function validateUserCredentials(users, inputUsername, inputPassword) {
-  // Use the Array.prototype.some() method to check if any user matches the input username and password
-  return users.some(
-    (user) => user.username === inputUsername && user.password === inputPassword
-  );
+const users = [
+    {
+      inputUser: "ana",
+      password: "bennett"
+    }
+  ];
+  
+  function validateUserCredentials(users, inputUsername, inputPassword) {
+    // Use the Array.prototype.some() method to check if any user matches the input username and password
+    return users.some(
+      (user) => user.inputUser === inputUsername && user.password === inputPassword
+    );
+  }
+  
+  console.log(validateUserCredentials(users, "ana", "bennett"));
+  // Check the result and log a message
+if (validateUserCredentials(users, "joe", "bennett")) {
+  console.log("User is valid. Access granted!");
+} else {
+  console.log("Invalid credentials. Access denied.");
 }
-console.log(validateUserCredentials());
