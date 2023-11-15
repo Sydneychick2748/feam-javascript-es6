@@ -24,8 +24,8 @@ Refactor this using map. log the new array to the console.*/
 
 const numbers = [65, 44, 12, 4];
 let newNum = []
-function myFunction(numArr) {
-  newNum = numArr.map((item)=> item*10)
+function myFunction(newArr) {
+  newNum = newArr.map((item)=> item*10)
   
 }
 myFunction(numbers)
